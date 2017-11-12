@@ -6,3 +6,88 @@
 body, * {
     @include reset;
 }
+body {
+    font-size: 12px;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.color-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 200%;
+    line-height: 1;
+    transition: all .3s ease;
+    background-color: #8C184E;
+    color: white;
+}
+
+/* Initial styles for the banner */
+#banner {
+    width: 300px;
+    height: 100px;
+    background: aqua;
+    position:fixed;
+    bottom:-110px;
+    z-index:9999;
+    right:80px;
+}
+
+/* Styles describing the animation itself. */
+#banner {
+  /* Safari and Chrome: */
+  -webkit-animation-name: flyout;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: flyout;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+/* Keyframes */
+@-webkit-keyframes flyout {
+    0% {
+      bottom: -110px;
+    }
+    20% {
+      bottom: 0px;
+    }
+    80% {
+      bottom: 0px;
+    }
+    100% {
+      bottom: -110px;
+    }
+}
+@keyframes flyout {
+    0% {
+      bottom: -110px;
+    }
+    20% {
+      bottom: 0px;
+    }
+    80% {
+      bottom: 0px;
+    }
+    100% {
+      bottom: -110px;
+    }
+}
